@@ -1,0 +1,25 @@
+x=input("Upisi broj\n")
+if x == '1':
+    print("Januar")
+if x=='2':
+    print("Febuar")
+if x == '3':
+    print("Mart")
+if x == '4':
+    print("April")
+if x=='5':
+    print("Maj")
+if x=='6':
+    print("Jun")
+if x=='7':
+    print("Jul")
+if x=='8':
+    print("Avgust")
+if x=='9':
+    print("Septembar")
+if x=='10':
+    print("Oktobar")
+if x=='11':
+    print("Novembar")
+if x=='12':
+    print("Decembar")
