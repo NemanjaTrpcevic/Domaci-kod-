@@ -1,0 +1,5 @@
+f = open('korisnici.txt', "r")
+for a in f.readlines():
+    b = a.split("|")
+    print("korisnicko ime: " + b[0] + '\n' + "lozinka: " + b[1])
+f.close()
