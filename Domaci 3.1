@@ -1,0 +1,14 @@
+string = input("Unesite frazu: ")
+x = string.split(" ")
+niz = []
+z = 0
+for f in x:
+    niz.append(x[z][0])
+    z = z+1
+
+z = 0
+print("Akronim za frazu je: ", end=" ")
+for n in niz:
+    print(niz[z].upper(), end="")
+    z = z + 1
+
