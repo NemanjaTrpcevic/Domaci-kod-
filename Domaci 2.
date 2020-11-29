@@ -1,0 +1,68 @@
+def IspisiMeni():
+    print("---------------Meni-------")
+    print("1. Ispis elemenata")
+    print("2. Unos novog elementa")
+    print("3. Modifikacija  elementa")
+    print("4. Brisanje postojećeg elementa")
+    print("x. Kraj programa")
+    print("---------------------------")
+
+
+def IspisRecnika():
+    print(recnik)
+
+
+def DodajNoviElement():
+    kljuc = input("Unesite novi kljuc: ")
+    sadrzaj = input("Unesite novi sadrzaj: ")
+    recnik.update({kljuc: sadrzaj})
+    print("Element je dodat u rečnik")
+
+
+def ModifikujElement():
+    kljuc = input("Unesite broj kljuca: ")
+    if kljuc in recnik.keys():
+        print("Uspešno ste pristupili elementu")
+        novisadrzaj = input("Unesite novi sadrzaj: ")
+        recnik.update({kljuc: sadrzaj})
+        print("Uspesno ste modifikovali")
+    else:
+        print("Uneliste nepostojeci kljuc")
+
+
+def IzbrisiElement():
+    kljuc = input("Unesite kljuc koji zelite da izbrisete: ")
+    if kljuc in recnik.keys():
+        del recnik[kljuc]
+        print("Element pod unetim ključem je uspešno izbrisan! ")
+    else:
+        print("Uneli ste nepostojeci kljuc")
+
+
+if __name__ == '__main__':
+    recnik = {
+        "1": "Snikers",
+        "2": "Coko Bananica",
+        "3": "Twix",
+        "4": "Bounty",
+        "5": "Stark",
+        "6": "Juhu",
+        "7": "Zoo",
+    }
+    print("U rečniku se nalaze najlepse cokoladice na svetu")
+    while True:
+        IspisiMeni()
+
+        opcija = input("Opcija: ")
+
+        if opcija == "1":
+            IspisRecnika()
+        elif opcija == '2':
+            DodajNoviElement()
+        elif opcija == '3':
+            ModifikujElement()
+        elif opcija == '4':
+            IzbrisiElement()
+        elif opcija == "x":
+            print("Kraj programa")
+            break
